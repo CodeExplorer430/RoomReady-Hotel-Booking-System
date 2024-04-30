@@ -599,7 +599,7 @@ public class CustomerRegistrationForm extends javax.swing.JFrame {
         // Validate password format
         if (!authManager.isValidPassword(password)){
             // Show error message
-            javax.swing.JOptionPane.showMessageDialog(this, "Password must be at least 8 characters long and contain both letters and numbers.");
+            javax.swing.JOptionPane.showMessageDialog(this, "Password must be at least 8 characters long and contain letters, numbers and special characters.");
             return;
         }
         
