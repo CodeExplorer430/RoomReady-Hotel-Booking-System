@@ -1,0 +1,2 @@
+testadmin|testadmin12%|Tester Account|Male|tester@tester.com|01234567890|Hotel Administrator|C:\Users\Miguel\Downloads\DALL·E 2023-08-28 02.46.01.png|2024-04-30 21:54:21
+adminmiguel|adminmiguel1$|Miguel Harvey N. Velasco|Male|velascomiguelharvey.bsit@gmail.com|09937420246|Hotel Administrator|C:\Users\Miguel\Downloads\ID_picture_2x2-removebg-preview.png|2024-05-01 00:23:54
