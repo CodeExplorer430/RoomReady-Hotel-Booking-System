@@ -1,0 +1,3 @@
+roomNumber|roomAvailability|roomType|hours|date|time
+123|Available|SUPERIOR|20|Mon15Jul2024|22:50:24
+111|Available|SUPERIOR|20|Tue30Jul2024|22:51:24

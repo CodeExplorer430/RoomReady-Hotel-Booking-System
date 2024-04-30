@@ -1,0 +1,14 @@
+accountNo|accountName|gender|age
+2024003|LawrenceBaylon|Male|18
+2024004|IvanPunay|Male|22
+2024005|HazelYamat|Female|20
+2024006|NaomiDavid|Female|22
+2024007|JeffreyMapago|Male|22
+2024008|JoseTan|Male|20
+2024009|JacodGuasis|Male|20
+2024010|ChristopherManois|Male|19
+2024012|AiraEstarija|Female|24
+2024013|NaijelDeang|Male|20
+2024014|GeoffPerez|Male|19
+2024015|CrisManuel|Male|20
+2024016|AliceCorre|Female|20
