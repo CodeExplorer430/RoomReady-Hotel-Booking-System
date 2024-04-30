@@ -5,6 +5,7 @@
 package main.java.roomready.authentication;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 /**
  *
@@ -13,6 +14,7 @@ import java.io.Serializable;
 public class Admin implements Serializable{
     private static final long serialVersionUID = 1L;
     
+    private String userId;
     private String username;
     private String password;
     private String fullName;
@@ -32,11 +34,22 @@ public class Admin implements Serializable{
         this.contactInfo = contactInfo;
         this.role = role;
         this.photoPath = photoPath;
-
+        
+        // Generate a unique ID
+        this.userId = generateUniqueId();
+    }
+    
+    // Method to generate a unique ID using UUID
+    private String generateUniqueId(){
+        return UUID.randomUUID().toString();
     }
     
     // Getters and setters for all field
     // Omitted for brevity
+    
+    public String getUserId(){
+        return userId;
+    }
     
      public String getUsername(){
         return username;

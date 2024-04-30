@@ -37,7 +37,7 @@ public class AdminAuthenticationManager {
             BufferedWriter writer = new BufferedWriter(new FileWriter(USER_FILE, true));
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
             String formattedTimestamp = registrationTimestamp.format(formatter);
-            writer.write(user.getUsername() + DELIMITER + user.getPassword() + DELIMITER + user.getFullName() + DELIMITER + user.getGender() + DELIMITER + user.getEmail() + DELIMITER + user.getContactInfo() + DELIMITER + user.getRole() + DELIMITER + user.getPhotoPath() + DELIMITER + formattedTimestamp + "\n");
+            writer.write(user.getUserId() + DELIMITER + user.getUsername() + DELIMITER + user.getPassword() + DELIMITER + user.getFullName() + DELIMITER + user.getGender() + DELIMITER + user.getEmail() + DELIMITER + user.getContactInfo() + DELIMITER + user.getRole() + DELIMITER + user.getPhotoPath() + DELIMITER + formattedTimestamp + "\n");
             writer.close();
         } catch (IOException e){
             e.printStackTrace();
@@ -50,7 +50,7 @@ public class AdminAuthenticationManager {
             String line;
             while ((line = reader.readLine()) != null){
                 String[] userInfo = line.split("\\" + DELIMITER); // Use the delimiter to split the line
-                if (userInfo.length == 9 && userInfo[0].trim().equals(username) && userInfo[1].trim().equals(password)){
+                if (userInfo.length == 10 && userInfo[1].trim().equals(username) && userInfo[2].trim().equals(password)){
                     reader.close();
                     return true;
                 }
@@ -68,8 +68,8 @@ public class AdminAuthenticationManager {
             String line;
             while ((line = reader.readLine()) != null){
                 String[] userInfo = line.split("\\" + DELIMITER); // Use the delimiter to split the line
-                if (userInfo.length == 9 && userInfo[0].trim().equals(username)){
-                    fullName = userInfo[2];
+                if (userInfo.length == 10 && userInfo[1].trim().equals(username)){
+                    fullName = userInfo[3];
                     reader.close();
                     break; // Stop searchin once the admin is found
                 }
@@ -156,6 +156,4 @@ public class AdminAuthenticationManager {
         // Return true if password meets all criteria, otherwise return false;
         return hasLetter && hasDigit && hasSpecialChar;
     }
-    
-    
 }

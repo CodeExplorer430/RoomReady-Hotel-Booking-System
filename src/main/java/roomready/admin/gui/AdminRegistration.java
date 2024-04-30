@@ -662,6 +662,7 @@ public class AdminRegistration extends javax.swing.JFrame {
         user.setRole(role);
         
         LocalDateTime registrationTimestamp = LocalDateTime.now();
+        
         // Register user
         authManager.registerAdmin(user, registrationTimestamp);
         

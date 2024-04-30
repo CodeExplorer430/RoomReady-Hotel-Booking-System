@@ -1,2 +1,2 @@
-testadmin|testadmin12%|Tester Account|Male|tester@tester.com|01234567890|Hotel Administrator|C:\Users\Miguel\Downloads\DALL·E 2023-08-28 02.46.01.png|2024-04-30 21:54:21
-adminmiguel|adminmiguel1$|Miguel Harvey N. Velasco|Male|velascomiguelharvey.bsit@gmail.com|09937420246|Hotel Administrator|C:\Users\Miguel\Downloads\ID_picture_2x2-removebg-preview.png|2024-05-01 00:23:54
+9374de38-53c9-4896-9d89-cd5a21beabd5|testadmin|testadmin12%|Tester Account|Male|tester@tester.com|01234567890|Hotel Administrator|C:\Users\Miguel\Downloads\DALL·E 2023-08-28 02.46.01.png|2024-04-30 21:54:21
+cb40916f-04a9-4b7f-96f6-dcc6c832f1e5|adminmiguel|adminmiguel1$|Miguel Harvey N. Velasco|Male|velascomiguelharvey.bsit@gmail.com|09937420246|Hotel Administrator|C:\Users\Miguel\Downloads\ID_picture_2x2-removebg-preview.png|2024-05-01 00:23:54

@@ -671,6 +671,7 @@ public class CustomerRegistrationForm extends javax.swing.JFrame {
         user.setDOB(dateOfBirth);
         
         LocalDateTime registrationTimestamp = LocalDateTime.now();
+        
         // Register user
         authManager.registerUser(user, registrationTimestamp);
         
