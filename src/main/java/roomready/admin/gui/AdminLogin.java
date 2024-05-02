@@ -36,8 +36,6 @@ public class AdminLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        loginButton = new javax.swing.JButton();
-        signUpButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -50,32 +48,6 @@ public class AdminLogin extends javax.swing.JFrame {
         showPasswordCheckBox = new javax.swing.JCheckBox();
         adminLogin = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
-
-        loginButton.setBackground(new java.awt.Color(102, 102, 102));
-        loginButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        loginButton.setForeground(new java.awt.Color(255, 255, 255));
-        loginButton.setText("LOGIN");
-        loginButton.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
-        loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        loginButton.setFocusable(false);
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButtonActionPerformed(evt);
-            }
-        });
-
-        signUpButton.setBackground(new java.awt.Color(102, 102, 102));
-        signUpButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        signUpButton.setForeground(new java.awt.Color(255, 255, 255));
-        signUpButton.setText("SIGN-UP");
-        signUpButton.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
-        signUpButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        signUpButton.setFocusable(false);
-        signUpButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                signUpButtonActionPerformed(evt);
-            }
-        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Admin Login");
@@ -280,54 +252,6 @@ public class AdminLogin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_showPasswordCheckBoxActionPerformed
 
-    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-//        String username = usernameField.getText();
-//        String password = new String(passwordField.getPassword());
-//
-//        // Perform validation
-//        if (username.isEmpty() || password.isEmpty()){
-//            //Show error message
-//            javax.swing.JOptionPane.showMessageDialog(this, "Please enter both username and password.");
-//            return;
-//        }
-//
-//        // Perform user authentication
-//        boolean authenticated = authManager.authenticateUser(username, password);
-//
-//        if (authenticated){
-//            // Successful login
-//            // Redirect to the main application or dashboard
-//            // For now, let's just show a success message
-//            javax.swing.JOptionPane.showMessageDialog(this, "Login Successful!");
-//
-//            // Clear the form fields
-//            usernameField.setText("");
-//            passwordField.setText("");
-//
-//            // Proceed to the main application or dashboard
-//            // For example:
-//            // MainApplicationFrame mainFrame = new MainApplicationFrame();
-//            // mainFrame.setVisible(true);
-//
-//            // Close the login form
-//            this.dispose();
-//
-//        } else {
-//            // Failed login
-//            // Show error message
-//            javax.swing.JOptionPane.showMessageDialog(this, "Invalid username or password.");
-//        }
-    }//GEN-LAST:event_loginButtonActionPerformed
-
-    private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
-//        // Close the current login form
-//        this.dispose();
-//
-//        // Show the registration form
-//        RegistrationForm registrationForm = new RegistrationForm(authManager);
-//        registrationForm.setVisible(true);
-    }//GEN-LAST:event_signUpButtonActionPerformed
-
     private void adminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLoginActionPerformed
         String username = adminUsernameField.getText();
         String password = new String(adminPasswordField.getPassword());
@@ -435,8 +359,6 @@ public class AdminLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JButton loginButton;
     private javax.swing.JCheckBox showPasswordCheckBox;
-    private javax.swing.JButton signUpButton;
     // End of variables declaration//GEN-END:variables
 }

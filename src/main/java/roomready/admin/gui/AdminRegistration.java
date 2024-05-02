@@ -16,11 +16,8 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.UIManager;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.io.File;
-import java.util.Date;
 
 /**
  *
@@ -665,6 +662,7 @@ public class AdminRegistration extends javax.swing.JFrame {
         user.setRole(role);
         
         LocalDateTime registrationTimestamp = LocalDateTime.now();
+        
         // Register user
         authManager.registerAdmin(user, registrationTimestamp);
         
