@@ -214,7 +214,7 @@ public class UserManagement extends javax.swing.JFrame {
     }//GEN-LAST:event_userTablePropertyChange
     
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
-        String filePath = "C:\\Users\\philipmathewbobis\\OneDrive\\Desktop\\Database for Booking System\\User Accounts.txt";
+        String filePath = "src/main/java/resources/User Accounts.txt";
         String tempFilePath = filePath + ".tmp";
         boolean foundAccount = false;
         
