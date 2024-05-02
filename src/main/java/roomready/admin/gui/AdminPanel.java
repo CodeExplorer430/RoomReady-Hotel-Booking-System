@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -7,6 +7,13 @@ package main.java.roomready.admin.gui;
 import main.java.roomready.authentication.AdminAuthenticationManager;
 
 import javax.swing.JOptionPane;
+
+
+import main.java.roomready.customer.dashboardtesting.Form1;
+import main.java.roomready.customer.dashboardtesting.Form2;
+import main.java.roomready.customer.dashboardtesting.Form3;
+import main.java.roomready.customer.dashboardtesting.Form4;
+import main.java.roomready.customer.dashboardtesting.Form5;
 
 /**
  *
@@ -40,23 +47,23 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         accountName = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton1 = new javax.swing.JButton();
+        roomManagementButton = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        paymentButton = new javax.swing.JButton();
+        guestManagementButton = new javax.swing.JButton();
+        notificationButton = new javax.swing.JButton();
+        systemSettingsButton = new javax.swing.JButton();
+        bookingManagementButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel21 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         logoutButton = new javax.swing.JButton();
+        tabbedPane = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Admin Dashboard");
+        setBackground(new java.awt.Color(0, 0, 0));
         setLocation(new java.awt.Point(30, 50));
-        setPreferredSize(new java.awt.Dimension(1200, 650));
         setResizable(false);
         setType(java.awt.Window.Type.POPUP);
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
@@ -89,7 +96,7 @@ public class AdminPanel extends javax.swing.JFrame {
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel19Layout.setVerticalGroup(
@@ -115,17 +122,17 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jSeparator1.setBackground(new java.awt.Color(51, 51, 51));
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(154, 51, 35));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/icons8-open-door-32.png"))); // NOI18N
-        jButton1.setText("ROOM MANAGEMENT");
-        jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        jButton1.setIconTextGap(10);
-        jButton1.setPreferredSize(new java.awt.Dimension(75, 75));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        roomManagementButton.setBackground(new java.awt.Color(204, 204, 204));
+        roomManagementButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        roomManagementButton.setForeground(new java.awt.Color(154, 51, 35));
+        roomManagementButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/icons8-open-door-32.png"))); // NOI18N
+        roomManagementButton.setText("ROOM MANAGEMENT");
+        roomManagementButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        roomManagementButton.setIconTextGap(10);
+        roomManagementButton.setPreferredSize(new java.awt.Dimension(75, 75));
+        roomManagementButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                roomManagementButtonActionPerformed(evt);
             }
         });
 
@@ -143,66 +150,80 @@ public class AdminPanel extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(204, 204, 204));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(154, 51, 35));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/card-payment 32px.png"))); // NOI18N
-        jButton3.setText("PAYMENT PROCESSING");
-        jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        jButton3.setIconTextGap(10);
-        jButton3.setPreferredSize(new java.awt.Dimension(75, 75));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        paymentButton.setBackground(new java.awt.Color(204, 204, 204));
+        paymentButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        paymentButton.setForeground(new java.awt.Color(154, 51, 35));
+        paymentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/card-payment 32px.png"))); // NOI18N
+        paymentButton.setText("PAYMENT PROCESSING");
+        paymentButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        paymentButton.setIconTextGap(10);
+        paymentButton.setPreferredSize(new java.awt.Dimension(75, 75));
+        paymentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                paymentButtonActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(204, 204, 204));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(154, 51, 35));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/guests 32px.png"))); // NOI18N
-        jButton4.setText("GUEST MANAGEMENT");
-        jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        jButton4.setIconTextGap(10);
-        jButton4.setPreferredSize(new java.awt.Dimension(75, 75));
-
-        jButton5.setBackground(new java.awt.Color(204, 204, 204));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(154, 51, 35));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/notification 32px.png"))); // NOI18N
-        jButton5.setText("NOTIFICATION");
-        jButton5.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        jButton5.setIconTextGap(10);
-        jButton5.setPreferredSize(new java.awt.Dimension(75, 75));
-
-        jButton6.setBackground(new java.awt.Color(204, 204, 204));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(154, 51, 35));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/icons8-settings-32.png"))); // NOI18N
-        jButton6.setText("SYSTEM SETTINGS");
-        jButton6.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        jButton6.setIconTextGap(10);
-        jButton6.setPreferredSize(new java.awt.Dimension(75, 75));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        guestManagementButton.setBackground(new java.awt.Color(204, 204, 204));
+        guestManagementButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        guestManagementButton.setForeground(new java.awt.Color(154, 51, 35));
+        guestManagementButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/guests 32px.png"))); // NOI18N
+        guestManagementButton.setText("GUEST MANAGEMENT");
+        guestManagementButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        guestManagementButton.setIconTextGap(10);
+        guestManagementButton.setPreferredSize(new java.awt.Dimension(75, 75));
+        guestManagementButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                guestManagementButtonActionPerformed(evt);
             }
         });
 
-        jButton8.setBackground(new java.awt.Color(204, 204, 204));
-        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(154, 51, 35));
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/calendar 32.png"))); // NOI18N
-        jButton8.setText("BOOKING MANAGEMENT");
-        jButton8.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
-        jButton8.setIconTextGap(10);
-        jButton8.setPreferredSize(new java.awt.Dimension(75, 75));
+        notificationButton.setBackground(new java.awt.Color(204, 204, 204));
+        notificationButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        notificationButton.setForeground(new java.awt.Color(154, 51, 35));
+        notificationButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/notification 32px.png"))); // NOI18N
+        notificationButton.setText("NOTIFICATION");
+        notificationButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        notificationButton.setIconTextGap(10);
+        notificationButton.setPreferredSize(new java.awt.Dimension(75, 75));
+        notificationButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notificationButtonActionPerformed(evt);
+            }
+        });
+
+        systemSettingsButton.setBackground(new java.awt.Color(204, 204, 204));
+        systemSettingsButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        systemSettingsButton.setForeground(new java.awt.Color(154, 51, 35));
+        systemSettingsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/icons8-settings-32.png"))); // NOI18N
+        systemSettingsButton.setText("SYSTEM SETTINGS");
+        systemSettingsButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        systemSettingsButton.setIconTextGap(10);
+        systemSettingsButton.setPreferredSize(new java.awt.Dimension(75, 75));
+        systemSettingsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                systemSettingsButtonActionPerformed(evt);
+            }
+        });
+
+        bookingManagementButton.setBackground(new java.awt.Color(204, 204, 204));
+        bookingManagementButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bookingManagementButton.setForeground(new java.awt.Color(154, 51, 35));
+        bookingManagementButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/calendar 32.png"))); // NOI18N
+        bookingManagementButton.setText("BOOKING MANAGEMENT");
+        bookingManagementButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        bookingManagementButton.setIconTextGap(10);
+        bookingManagementButton.setPreferredSize(new java.awt.Dimension(75, 75));
+        bookingManagementButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bookingManagementButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,14 +239,17 @@ public class AdminPanel extends javax.swing.JFrame {
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(paymentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(guestManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(systemSettingsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(notificationButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(roomManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bookingManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(25, 25, 25))
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -240,20 +264,20 @@ public class AdminPanel extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bookingManagementButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(roomManagementButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(paymentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(guestManagementButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(systemSettingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(notificationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel20);
@@ -261,12 +285,11 @@ public class AdminPanel extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.setPreferredSize(new java.awt.Dimension(800, 600));
-
-        jTabbedPane1.setPreferredSize(new java.awt.Dimension(800, 600));
+        jPanel2.setLayout(null);
 
         jPanel21.setBackground(new java.awt.Color(154, 51, 35));
         jPanel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel21.setPreferredSize(new java.awt.Dimension(160, 70));
+        jPanel21.setPreferredSize(new java.awt.Dimension(170, 70));
 
         jLabel24.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
@@ -280,6 +303,7 @@ public class AdminPanel extends javax.swing.JFrame {
         logoutButton.setText("LOGOUT");
         logoutButton.setToolTipText("");
         logoutButton.setBorder(null);
+        logoutButton.setFocusable(false);
         logoutButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         logoutButton.setIconTextGap(10);
         logoutButton.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -296,8 +320,8 @@ public class AdminPanel extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 267, Short.MAX_VALUE)
+                .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,20 +332,15 @@ public class AdminPanel extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 798, Short.MAX_VALUE)
-            .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, 798, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jPanel2.add(jPanel21);
+        jPanel21.setBounds(1, 1, 800, 70);
+
+        tabbedPane.setBackground(new java.awt.Color(255, 255, 255));
+        tabbedPane.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        tabbedPane.setForeground(new java.awt.Color(204, 204, 204));
+        tabbedPane.setPreferredSize(new java.awt.Dimension(800, 400));
+        jPanel2.add(tabbedPane);
+        tabbedPane.setBounds(1, 29, 800, 670);
 
         getContentPane().add(jPanel2);
 
@@ -345,26 +364,43 @@ public class AdminPanel extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_logoutButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void paymentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentButtonActionPerformed
+        tabbedPane.removeAll();
+        tabbedPane.addTab("Form 3", new Form3());
+    }//GEN-LAST:event_paymentButtonActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void roomManagementButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roomManagementButtonActionPerformed
+        tabbedPane.removeAll();
+        tabbedPane.addTab("Form 2", new Form2());
+    }//GEN-LAST:event_roomManagementButtonActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void systemSettingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_systemSettingsButtonActionPerformed
         // Close the current dashboard
         this.dispose();
 
         // Open the admin registration form when the button is clicked
         AdminRegistration adminRegistration = new AdminRegistration(authManager); // Create an instance of the AdminRegistration;
-        adminRegistration.setVisible(true); // Show the admin registration form
-    }//GEN-LAST:event_jButton6ActionPerformed
+        adminRegistration.setVisible(true); // Show the admin registration form                                       
+    }//GEN-LAST:event_systemSettingsButtonActionPerformed
+
+    private void notificationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notificationButtonActionPerformed
+        tabbedPane.removeAll();
+        tabbedPane.addTab("Form 5", new Form5());
+    }//GEN-LAST:event_notificationButtonActionPerformed
+
+    private void bookingManagementButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookingManagementButtonActionPerformed
+        tabbedPane.removeAll();
+        tabbedPane.addTab("Form 1", new Form1());
+    }//GEN-LAST:event_bookingManagementButtonActionPerformed
+
+    private void guestManagementButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guestManagementButtonActionPerformed
+        tabbedPane.removeAll();
+        tabbedPane.addTab("Form 4", new Form4());
+    }//GEN-LAST:event_guestManagementButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -404,13 +440,9 @@ public class AdminPanel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel accountName;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton bookingManagementButton;
+    private javax.swing.JButton guestManagementButton;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
@@ -421,7 +453,11 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton logoutButton;
+    private javax.swing.JButton notificationButton;
+    private javax.swing.JButton paymentButton;
+    private javax.swing.JButton roomManagementButton;
+    private javax.swing.JButton systemSettingsButton;
+    private javax.swing.JTabbedPane tabbedPane;
     // End of variables declaration//GEN-END:variables
 }
