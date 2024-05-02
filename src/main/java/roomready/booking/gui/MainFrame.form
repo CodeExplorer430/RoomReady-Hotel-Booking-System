@@ -114,9 +114,6 @@
               <Color blue="1d" green="1d" red="24" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/bed.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Room Reservation"/>
           </Properties>
         </Component>
@@ -164,9 +161,6 @@
                   <Color blue="14" green="8" red="0" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/magnifier.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Search Available Rooms"/>
               </Properties>
             </Component>

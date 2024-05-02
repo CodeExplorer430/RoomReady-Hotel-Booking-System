@@ -66,7 +66,6 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 25)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(36, 29, 29));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bed.png"))); // NOI18N
         jLabel1.setText("Room Reservation");
 
         jPanel4.setBackground(new java.awt.Color(212, 163, 115));
@@ -74,7 +73,6 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 8, 20));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/magnifier.png"))); // NOI18N
         jLabel2.setText("Search Available Rooms");
 
         showRooms.setBackground(new java.awt.Color(212, 163, 115));
@@ -225,7 +223,7 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void showRoomsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showRoomsActionPerformed
         if(!buttonClicked){ // Check if the button has not been clicked before
-        final String pathFile = "C:\\Users\\philipmathewbobis\\OneDrive\\Desktop\\Database for Booking System\\Rooms.txt";
+        final String pathFile = "src/main/java/resources/data/Rooms.txt";
         final String DELIMITER = "|";
         
         try(BufferedReader reader = new BufferedReader(new FileReader(pathFile))){
@@ -289,16 +287,47 @@ public class MainFrame extends javax.swing.JFrame {
                 foundRoom = true; // update the found flag
                 Object roomAvailabilty = model.getValueAt(row, 1);
                 if (roomAvailabilty != null && roomAvailabilty.toString().equalsIgnoreCase("Available")){
-                    isAvailable = true; // update availabl room
+                    isAvailable = true; // update available room
                     // Return an array conataining the data of the row
                     Object[] rowData = new Object[columnCount];
                     for (int i = 0;i < columnCount;i++){
                         rowData[i] = model.getValueAt(row, i);
                     }
-                    JOptionPane.showMessageDialog(null, "Room no. " + rowData[0] +
+                    Object rateType = model.getValueAt(row, 2);
+                       if (rateType != null && rateType.toString().equalsIgnoreCase("deluxe1")){
+                           JOptionPane.showMessageDialog(null, "Room no. " + rowData[0] +
                                                                       "\nRoom availability: " + rowData[1] +
-                                                                      "\nRoom type: " + rowData[2],"Selected Room",JOptionPane.INFORMATION_MESSAGE);
-                // Open the next window here 
+                                                                      "\nRoom type: " + rowData[2]+ 
+                                                                      "\nRates: 3hrs 395 pesos" + 
+                                                                      "\n\t\t 6hrs 595 pesos" + 
+                                                                      "\n\t\t 12hrs 995 pesos" + 
+                                                                      "\n\t\t 24hrs 1,495 pesos" + 
+                                                                      "\n\t\t OT 132 pesos","Selected Room",JOptionPane.INFORMATION_MESSAGE);
+                
+                       }
+                       if (rateType != null && rateType.toString().equalsIgnoreCase("deluxe2")){
+                           JOptionPane.showMessageDialog(null, "Room no. " + rowData[0] +
+                                                                      "\nRoom availability: " + rowData[1] +
+                                                                      "\nRoom type: " + rowData[2]+ 
+                                                                      "\nRates: 3hrs 495 pesos" + 
+                                                                      "\n\t\t 6hrs 695 pesos" + 
+                                                                      "\n\t\t 12hrs 1,100 pesos" + 
+                                                                      "\n\t\t 24hrs 1,595 pesos" + 
+                                                                      "\n\t\t OT 165 pesos","Selected Room",JOptionPane.INFORMATION_MESSAGE);
+                
+                       }
+                       if (rateType != null && rateType.toString().equalsIgnoreCase("superior")){
+                           JOptionPane.showMessageDialog(null, "Room no. " + rowData[0] +
+                                                                      "\nRoom availability: " + rowData[1] +
+                                                                      "\nRoom type: " + rowData[2]+ 
+                                                                      "\nRates: 3hrs 695 pesos" + 
+                                                                      "\n\t\t 6hrs 895 pesos" + 
+                                                                      "\n\t\t 12hrs 1,195 pesos" + 
+                                                                      "\n\t\t 24hrs 1,695 pesos" + 
+                                                                      "\n\t\t OT 265 pesos","Selected Room",JOptionPane.INFORMATION_MESSAGE);
+                
+                       }
+                    // Open the next window here 
                 SecondFrame fillForm = new SecondFrame(rowData);
                 fillForm.setVisible(true);
                 // Dispose the current window
