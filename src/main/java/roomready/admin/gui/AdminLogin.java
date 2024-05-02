@@ -130,7 +130,7 @@ public class AdminLogin extends javax.swing.JFrame {
         adminLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         adminLogin.setForeground(new java.awt.Color(255, 255, 255));
         adminLogin.setText("LOGIN");
-        adminLogin.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        adminLogin.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
         adminLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         adminLogin.setFocusable(false);
         adminLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -143,7 +143,7 @@ public class AdminLogin extends javax.swing.JFrame {
         backButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         backButton.setForeground(new java.awt.Color(255, 255, 255));
         backButton.setText("BACK");
-        backButton.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        backButton.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
         backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backButton.setFocusable(false);
         backButton.addActionListener(new java.awt.event.ActionListener() {

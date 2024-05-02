@@ -1,6 +1,8 @@
 package main.java.roomready.booking.gui;
 
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -31,6 +33,7 @@ public class SecondFrame extends javax.swing.JFrame {
             this.rowData = rowData; // Store the rowData in the instance variable 
             // CALL a method to display the rowData in the frame
             displayRoomDetails();
+            initializeComponents();
     }
     
     // Method to display in the frame components
@@ -46,6 +49,33 @@ public class SecondFrame extends javax.swing.JFrame {
      */
     public SecondFrame() {
         initComponents();
+        initializeComponents();
+    }
+    
+    private void initializeComponents(){
+        // Initialize components here
+        
+        // Add a WindowlListener to the frame
+        this.addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent e){
+                // Call your validation here 
+                boolean isValid = validateBeforeClose();
+                if (!isValid){
+                    // If validation fails or the user do unnecessary, cancel the window close operation
+                    setDefaultCloseOperation(SecondFrame.DO_NOTHING_ON_CLOSE);
+                } else {
+                    // If validation process or yes, will close the window
+                    setDefaultCloseOperation(SecondFrame.DISPOSE_ON_CLOSE);
+                }
+            }
+        });
+    }
+    
+    private boolean validateBeforeClose(){
+            
+       // Get the choice of the user if want to close the window or frame
+       int choice = JOptionPane.showConfirmDialog(this, "Do you want to close?","Confirmation",JOptionPane.YES_NO_OPTION);
+       return choice == JOptionPane.YES_OPTION; // return the value of choice of equal to YES_OPTION 
     }
 
     /**
@@ -72,6 +102,7 @@ public class SecondFrame extends javax.swing.JFrame {
         confirmBooking = new javax.swing.JButton();
         cancelBooking = new javax.swing.JButton();
         calendar = new com.toedter.calendar.JCalendar();
+        back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -167,7 +198,7 @@ public class SecondFrame extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(calendar, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cancelBooking, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,25 +230,38 @@ public class SecondFrame extends javax.swing.JFrame {
                 .addGap(34, 34, 34))
         );
 
+        back.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(6, 6, 6)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 819, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(715, 715, 715)
+                        .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(67, 67, 67)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel1))
+                    .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -281,25 +325,26 @@ public class SecondFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_confirmBookingActionPerformed
 
     private void cancelBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelBookingActionPerformed
-        // Define an array of custom button options
-        Object[] options = {"Yes","No"};
-        SecondFrame frame = new SecondFrame();
-        
-        // Display a dialog with custom button options
-        int choice = JOptionPane.showOptionDialog(null, 
-                                                      "Are you sure you want to cancel?", 
-                                                      "Cancel Booking",
-                                                      JOptionPane.DEFAULT_OPTION,
-                                                      JOptionPane.QUESTION_MESSAGE,
-                                                      null, options, options[0]);
+        // Show a confirmation dialog
+        int choice = JOptionPane.showConfirmDialog(null, "Are you sure you want to cancel?","Confirmation", JOptionPane.YES_NO_OPTION);
         
         // Check the user's choice
-        if (choice == 0){
+        if (choice == JOptionPane.YES_OPTION){
             dispose();
-        }else {
-            JOptionPane.showMessageDialog(null, "Continue filling the form.","Back",JOptionPane.INFORMATION_MESSAGE);
+        }else if (choice == JOptionPane.NO_OPTION){
+            JOptionPane.showMessageDialog(null, "Continue Filling the form","Back", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_cancelBookingActionPerformed
+    
+    // Method to back to MainFrame or Rooms
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        // Initialize MainFrame class to call that frame or window
+        MainFrame backToMainFrame = new MainFrame();
+        // Set visible true to display again the MainFrame Jframe
+        backToMainFrame.setVisible(true);
+        // Then dispose the current window or the secondframe
+        dispose();
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -308,7 +353,7 @@ public class SecondFrame extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.orback/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -337,6 +382,7 @@ public class SecondFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton back;
     private com.toedter.calendar.JCalendar calendar;
     private javax.swing.JButton cancelBooking;
     private javax.swing.JButton confirmBooking;

@@ -2,6 +2,10 @@ package main.java.roomready.booking.gui;
 
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -25,6 +29,33 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
+        initializeComponents();
+    }
+    
+    private void initializeComponents(){
+        // Initialize components here
+        
+        // Add a WindowlListener to the frame
+        this.addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent e){
+                // Call your validation here 
+                boolean isValid = validateBeforeClose();
+                if (!isValid){
+                    // If validation fails or the user do unnecessary, cancel the window close operation
+                    setDefaultCloseOperation(MainFrame.DO_NOTHING_ON_CLOSE);
+                } else {
+                    // If validation process or yes, will close the window
+                    setDefaultCloseOperation(MainFrame.DISPOSE_ON_CLOSE);
+                }
+            }
+        });
+    }
+    
+    private boolean validateBeforeClose(){
+            
+       // Get the choice of the user if want to close the window or frame
+       int choice = JOptionPane.showConfirmDialog(this, "Do you want to close?","Confirmation",JOptionPane.YES_NO_OPTION);
+       return choice == JOptionPane.YES_OPTION; // return the value of choice of equal to YES_OPTION 
     }
 
     /**
@@ -158,6 +189,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         enterRoom.setBackground(new java.awt.Color(255, 255, 255));
         enterRoom.setForeground(new java.awt.Color(0, 0, 0));
+        enterRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enterRoomActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -258,6 +294,15 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_showRoomsActionPerformed
 
+    private void setupEnterKeyHandling(){
+        // Add action listener to the Enter Room no.
+        enterRoom.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                submitRoomNo.doClick();
+            }
+        });
+    }
+    
     private void roomTablePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_roomTablePropertyChange
         DefaultTableCellRenderer dtcr = new DefaultTableCellRenderer();
         dtcr.setHorizontalAlignment(DefaultTableCellRenderer.CENTER);
@@ -353,6 +398,17 @@ public class MainFrame extends javax.swing.JFrame {
     private void jPanel1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel1AncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1AncestorAdded
+    // Declare a boolean variable to track whether the enter key has been pressed
+    private boolean enterKey = false;
+    
+    private void enterRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterRoomActionPerformed
+        // Check if enter key handling setup is needed
+        if (!enterKey){
+            setupEnterKeyHandling();
+        }
+        // Set enter key to true to indicate that setup has been done
+        enterKey = true;
+    }//GEN-LAST:event_enterRoomActionPerformed
 
     /**
      * @param args the command line arguments
