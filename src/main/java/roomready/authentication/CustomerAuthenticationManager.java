@@ -90,7 +90,7 @@ public class CustomerAuthenticationManager {
             String line;
             while((line = reader.readLine()) != null){
                 String[] userInfo = line.split("\\" + DELIMITER);
-                if (userInfo.length > 0 && userInfo[0].trim().equals(username)){
+                if (userInfo.length > 1 && userInfo[1].trim().equals(username)){
                     return true; // Username found in the file
                 }
             }
