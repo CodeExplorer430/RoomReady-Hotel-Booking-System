@@ -187,7 +187,7 @@ public class PanelSwitcher extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel6.setText("FORM 1");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, -1, 38));
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, -1, 38));
 
         jTabbedPane1.addTab("tab1", jPanel4);
 

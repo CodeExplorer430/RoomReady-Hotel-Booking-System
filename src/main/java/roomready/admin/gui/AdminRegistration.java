@@ -83,6 +83,7 @@ public class AdminRegistration extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Customer Registration");
+        setAutoRequestFocus(false);
         setLocation(new java.awt.Point(150, 150));
         setModalExclusionType(null);
         setResizable(false);
@@ -265,10 +266,11 @@ public class AdminRegistration extends javax.swing.JFrame {
             }
         });
 
-        roleComboBox.setBackground(new java.awt.Color(255, 255, 255));
+        roleComboBox.setBackground(new java.awt.Color(204, 204, 204));
         roleComboBox.setForeground(new java.awt.Color(0, 0, 0));
         roleComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hotel Administrator", "Receptionist" }));
         roleComboBox.setSelectedIndex(-1);
+        roleComboBox.setFocusable(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -279,7 +281,7 @@ public class AdminRegistration extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                         .addComponent(dateTimeLabel1)
                         .addGap(14, 14, 14))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -479,7 +481,7 @@ public class AdminRegistration extends javax.swing.JFrame {
         contactInfoField.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                roleComboBox.requestFocusInWindow(); // Move focus to date of birth date chooser
+                roleComboBox.requestFocusInWindow(); // Move focus to role combobox
             }
         });
     }
@@ -560,7 +562,7 @@ public class AdminRegistration extends javax.swing.JFrame {
         // Close the current registration form
         this.dispose();
        
-        // Show the existing instance of the login form
+        // Show the existing instance of the admin dashboard
         AdminPanel adminPanel = new AdminPanel(adminFullName);
         adminPanel.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
@@ -600,7 +602,7 @@ public class AdminRegistration extends javax.swing.JFrame {
         // Validate password format
         if (!authManager.isValidPassword(password)){
             // Show error message
-            javax.swing.JOptionPane.showMessageDialog(this, "Password must be at least 8 characters long and contain letters, numbers and special characters.");
+            javax.swing.JOptionPane.showMessageDialog(this, "Password must be at least 8 characters long and contains letters, numbers and special characters.");
             return;
         }
         
@@ -670,6 +672,18 @@ public class AdminRegistration extends javax.swing.JFrame {
         javax.swing.JOptionPane.showMessageDialog(this, "Registration successful!");
         
         // Clear the form fields and date chooser
+        clearForms();
+        
+        // Close the registration form
+        this.dispose();
+        
+        // Return to the login form
+        AdminPanel adminPanel = new AdminPanel(adminFullName);
+        adminPanel.setVisible(true);
+    }//GEN-LAST:event_registerButtonActionPerformed
+    
+    // Method for clearing the fields in the form
+    private void clearForms(){
         usernameField.setText("");
         passwordField.setText("");
         confirmPasswordField.setText("");
@@ -679,15 +693,8 @@ public class AdminRegistration extends javax.swing.JFrame {
         contactInfoField.setText("");
         roleComboBox.setSelectedIndex(-1);
         pictureLabel1.setIcon(defaultImageIcon);
-        
-        // Close the registration form
-        this.dispose();
-        
-        // Return to the login form
-        AdminPanel adminPanel = new AdminPanel(adminFullName);
-        adminPanel.setVisible(true);
-    }//GEN-LAST:event_registerButtonActionPerformed
-
+    }
+    
     private void otherRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_otherRadioButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_otherRadioButtonActionPerformed

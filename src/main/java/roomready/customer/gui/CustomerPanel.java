@@ -117,6 +117,7 @@ public class CustomerPanel extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(154, 51, 35));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/icons8-3-star-hotel-32.png"))); // NOI18N
         jButton1.setText("ROOM RESERVATION");
+        jButton1.setFocusable(false);
         jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton1.setIconTextGap(10);
         jButton1.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -126,6 +127,7 @@ public class CustomerPanel extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(154, 51, 35));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/icons8-payment-32.png"))); // NOI18N
         jButton3.setText("PAYMENT PROCESSING");
+        jButton3.setFocusable(false);
         jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton3.setIconTextGap(10);
         jButton3.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -140,6 +142,7 @@ public class CustomerPanel extends javax.swing.JFrame {
         jButton6.setForeground(new java.awt.Color(154, 51, 35));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/icons8-user-settings-32.png"))); // NOI18N
         jButton6.setText("ACCOUNT SETTINGS");
+        jButton6.setFocusable(false);
         jButton6.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton6.setIconTextGap(10);
         jButton6.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -149,6 +152,7 @@ public class CustomerPanel extends javax.swing.JFrame {
         jButton2.setForeground(new java.awt.Color(154, 51, 35));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/icons8-booking-32.png"))); // NOI18N
         jButton2.setText("VIEW BOOKINGS");
+        jButton2.setFocusable(false);
         jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton2.setIconTextGap(10);
         jButton2.setPreferredSize(new java.awt.Dimension(75, 75));

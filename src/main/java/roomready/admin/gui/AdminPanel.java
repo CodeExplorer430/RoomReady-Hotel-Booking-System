@@ -15,6 +15,8 @@ import main.java.roomready.customer.dashboardtesting.Form3;
 import main.java.roomready.customer.dashboardtesting.Form4;
 import main.java.roomready.customer.dashboardtesting.Form5;
 
+import main.java.roomready.room.gui.RoomManagement;
+
 /**
  *
  * @author Miguel
@@ -43,6 +45,7 @@ public class AdminPanel extends javax.swing.JFrame {
         jPanel19 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         accountName = new javax.swing.JLabel();
@@ -64,16 +67,14 @@ public class AdminPanel extends javax.swing.JFrame {
         setTitle("Admin Dashboard");
         setBackground(new java.awt.Color(0, 0, 0));
         setLocation(new java.awt.Point(30, 50));
+        setPreferredSize(new java.awt.Dimension(1250, 640));
         setResizable(false);
         setType(java.awt.Window.Type.POPUP);
-        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel20.setBackground(new java.awt.Color(240, 232, 221));
-        jPanel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel20.setPreferredSize(new java.awt.Dimension(400, 600));
 
         jPanel19.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel19.setPreferredSize(new java.awt.Dimension(400, 70));
 
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -85,27 +86,37 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel22.setPreferredSize(new java.awt.Dimension(55, 55));
         jLabel22.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
-        jLabel23.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel23.setText("ROOMREADY: HOTEL BOOKING SYSTEM");
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setText("ROOMREADY");
+
+        jLabel25.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("HOTEL BOOKING SYSTEM");
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addContainerGap()
                 .addComponent(jLabel23)
-                .addContainerGap(24, Short.MAX_VALUE))
-            .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
+                .addComponent(jLabel25)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/hotel-manager 64px.png"))); // NOI18N
@@ -127,6 +138,7 @@ public class AdminPanel extends javax.swing.JFrame {
         roomManagementButton.setForeground(new java.awt.Color(154, 51, 35));
         roomManagementButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/icons8-open-door-32.png"))); // NOI18N
         roomManagementButton.setText("ROOM MANAGEMENT");
+        roomManagementButton.setFocusable(false);
         roomManagementButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         roomManagementButton.setIconTextGap(10);
         roomManagementButton.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -141,6 +153,7 @@ public class AdminPanel extends javax.swing.JFrame {
         jButton2.setForeground(new java.awt.Color(154, 51, 35));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/business-report 32px.png"))); // NOI18N
         jButton2.setText("REPORT GENERATION");
+        jButton2.setFocusable(false);
         jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton2.setIconTextGap(10);
         jButton2.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -155,6 +168,7 @@ public class AdminPanel extends javax.swing.JFrame {
         paymentButton.setForeground(new java.awt.Color(154, 51, 35));
         paymentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/card-payment 32px.png"))); // NOI18N
         paymentButton.setText("PAYMENT PROCESSING");
+        paymentButton.setFocusable(false);
         paymentButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         paymentButton.setIconTextGap(10);
         paymentButton.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -169,6 +183,7 @@ public class AdminPanel extends javax.swing.JFrame {
         guestManagementButton.setForeground(new java.awt.Color(154, 51, 35));
         guestManagementButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/guests 32px.png"))); // NOI18N
         guestManagementButton.setText("GUEST MANAGEMENT");
+        guestManagementButton.setFocusable(false);
         guestManagementButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         guestManagementButton.setIconTextGap(10);
         guestManagementButton.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -183,6 +198,7 @@ public class AdminPanel extends javax.swing.JFrame {
         notificationButton.setForeground(new java.awt.Color(154, 51, 35));
         notificationButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/notification 32px.png"))); // NOI18N
         notificationButton.setText("NOTIFICATION");
+        notificationButton.setFocusable(false);
         notificationButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         notificationButton.setIconTextGap(10);
         notificationButton.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -197,6 +213,7 @@ public class AdminPanel extends javax.swing.JFrame {
         systemSettingsButton.setForeground(new java.awt.Color(154, 51, 35));
         systemSettingsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/icons8-settings-32.png"))); // NOI18N
         systemSettingsButton.setText("SYSTEM SETTINGS");
+        systemSettingsButton.setFocusable(false);
         systemSettingsButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         systemSettingsButton.setIconTextGap(10);
         systemSettingsButton.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -211,6 +228,7 @@ public class AdminPanel extends javax.swing.JFrame {
         bookingManagementButton.setForeground(new java.awt.Color(154, 51, 35));
         bookingManagementButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/java/resources/images/calendar 32.png"))); // NOI18N
         bookingManagementButton.setText("BOOKING MANAGEMENT");
+        bookingManagementButton.setFocusable(false);
         bookingManagementButton.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         bookingManagementButton.setIconTextGap(10);
         bookingManagementButton.setPreferredSize(new java.awt.Dimension(75, 75));
@@ -225,31 +243,29 @@ public class AdminPanel extends javax.swing.JFrame {
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(116, 116, 116))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                        .addComponent(accountName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)))
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(116, 116, 116))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                                .addComponent(accountName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)))
+                        .addGroup(jPanel20Layout.createSequentialGroup()
+                            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                                .addComponent(notificationButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(systemSettingsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(guestManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(paymentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(roomManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bookingManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jSeparator1))
+                            .addGap(28, 28, 28))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(paymentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(guestManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(systemSettingsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(notificationButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(roomManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bookingManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(25, 25, 25))
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,19 +293,16 @@ public class AdminPanel extends javax.swing.JFrame {
                 .addComponent(notificationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel20);
-
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel2.setPreferredSize(new java.awt.Dimension(800, 600));
+        jPanel2.setFocusable(false);
+        jPanel2.setPreferredSize(new java.awt.Dimension(850, 600));
         jPanel2.setLayout(null);
 
         jPanel21.setBackground(new java.awt.Color(154, 51, 35));
-        jPanel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel21.setPreferredSize(new java.awt.Dimension(170, 70));
+        jPanel21.setPreferredSize(new java.awt.Dimension(200, 70));
 
         jLabel24.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
@@ -320,7 +333,7 @@ public class AdminPanel extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 267, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 379, Short.MAX_VALUE)
                 .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel21Layout.setVerticalGroup(
@@ -329,20 +342,32 @@ public class AdminPanel extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel24)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel21);
-        jPanel21.setBounds(1, 1, 800, 70);
+        jPanel21.setBounds(-9, 1, 910, 70);
 
         tabbedPane.setBackground(new java.awt.Color(255, 255, 255));
-        tabbedPane.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         tabbedPane.setForeground(new java.awt.Color(204, 204, 204));
-        tabbedPane.setPreferredSize(new java.awt.Dimension(800, 400));
+        tabbedPane.setPreferredSize(new java.awt.Dimension(850, 400));
         jPanel2.add(tabbedPane);
-        tabbedPane.setBounds(1, 29, 800, 670);
+        tabbedPane.setBounds(-9, 39, 910, 660);
 
-        getContentPane().add(jPanel2);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 897, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
         setLocationRelativeTo(null);
@@ -375,7 +400,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
     private void roomManagementButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roomManagementButtonActionPerformed
         tabbedPane.removeAll();
-        tabbedPane.addTab("Form 2", new Form2());
+        tabbedPane.addTab("Room Management", new RoomManagement());
     }//GEN-LAST:event_roomManagementButtonActionPerformed
 
     private void systemSettingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_systemSettingsButtonActionPerformed
@@ -446,6 +471,7 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel19;
