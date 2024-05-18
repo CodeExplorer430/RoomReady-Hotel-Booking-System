@@ -6,6 +6,7 @@ package main.java.roomready.customer.gui;
 
 import javax.swing.JOptionPane;
 import main.java.roomready.authentication.CustomerAuthenticationManager;
+import main.java.roomready.booking.gui.MainFrame;
 
 /**
  *
@@ -120,6 +121,11 @@ public class CustomerPanel extends javax.swing.JFrame {
         jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton1.setIconTextGap(10);
         jButton1.setPreferredSize(new java.awt.Dimension(75, 75));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -294,6 +300,11 @@ public class CustomerPanel extends javax.swing.JFrame {
         customerLogin.setVisible(true); // Show the customer login form
         }
     }//GEN-LAST:event_logoutButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       MainFrame roomReservation = new MainFrame();
+       roomReservation.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

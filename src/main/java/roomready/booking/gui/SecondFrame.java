@@ -13,6 +13,8 @@ import java.time.format.DateTimeParseException;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import java.io.IOException;
+import main.java.roomready.payment.Payment;
+import main.java.roomready.payment.PaymentWindow;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -301,6 +303,12 @@ public class SecondFrame extends javax.swing.JFrame {
         String combineDate =  month + " " + day + ", " + year + " " + dayInWeek;
         String dateTofile = String.join("", dateParts[0] + dateParts[2] + dateParts[1] + dateParts[5]);
         
+        
+        if(selectedHour < 1){
+            JOptionPane.showMessageDialog(null, "Please enter 1 to 24 hour.","Invalid hour",JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
         // Use try-with-resources to automatically close the BufferedWriter
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(pathFile, true))){
             if (pathFile.length() > 0){
@@ -318,9 +326,10 @@ public class SecondFrame extends javax.swing.JFrame {
                                                               "Confirmation Booking", 
                                                               JOptionPane.INFORMATION_MESSAGE);
             hour.setValue(0);
+            PaymentWindow payment = new PaymentWindow(roomNo,selectedHour,type,combineDate);
+            payment.setVisible(true);
             dispose(); // close the window after after the confirmation of booking
         }catch (IOException e){
-            e.printStackTrace();
         }
     }//GEN-LAST:event_confirmBookingActionPerformed
 
