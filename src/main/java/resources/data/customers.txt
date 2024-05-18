@@ -3,3 +3,5 @@
 56c9da30-2d20-42b1-8c82-dd2132ff182e|customer2|customer2%|Philip Mathew Bobis|Male|bobisphilipmathew.bsit@gmail.com|09948196759|2004-03-14|C:\Users\Miguel\Downloads\bobis.jpg|2024-04-29 22:57:09
 412b37b4-b26b-4d1b-bbcc-bbde74c3938c|pmbobis|136622120196Pm@|Philip Mathew Bobis|Male|pmathew2004@gmail.com|09948196759|2004-03-14|C:\Users\philipmathewbobis\OneDrive\Documents\diamon-hotel.jpg|2024-05-01 02:55:00
 e6036a95-a124-4ad2-91ee-d69a8c40dc6c|ryangosling|ryangosling85!|Ryan Gosling|Male|ryangosling@gmail.com|01234567890|1985-11-15|C:\Users\Miguel\Downloads\Ryan Gosling.jpg|2024-05-01 04:14:45
+ea6bdcb7-56f4-4365-9b0d-324a60a99ea6|jankyran|password123%|Jan Kyran T. Villamor|Male|jankyranvillamor@gmail.com|09535665231|2004-06-30|C:\Users\Miguel\Downloads\Kyran pic.jpg|2024-05-13 23:22:49
+5daff0f1-5b0d-486a-835e-b48dd3b1a352|testuser12|testingpassword678$|Tester Account|Male|test@gmail.com|133678687|2001-06-15|C:\Users\Miguel\Downloads\the-beatles-let-it-be-rubber-soul-music-abbey-road-the-beatles-d3a283cfbb21bdc59ebc10bfdc29cfd7.png|2024-05-13 23:25:44

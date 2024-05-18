@@ -246,6 +246,7 @@
               <Image iconType="3" name="/main/java/resources/images/icons8-3-star-hotel-32.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="ROOM RESERVATION"/>
+            <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="10"/>
             <Property name="iconTextGap" type="int" value="10"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -271,6 +272,7 @@
               <Image iconType="3" name="/main/java/resources/images/icons8-payment-32.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="PAYMENT PROCESSING"/>
+            <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="10"/>
             <Property name="iconTextGap" type="int" value="10"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -296,6 +298,7 @@
               <Image iconType="3" name="/main/java/resources/images/icons8-user-settings-32.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="ACCOUNT SETTINGS"/>
+            <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="10"/>
             <Property name="iconTextGap" type="int" value="10"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -318,6 +321,7 @@
               <Image iconType="3" name="/main/java/resources/images/icons8-booking-32.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="VIEW BOOKINGS"/>
+            <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="10"/>
             <Property name="iconTextGap" type="int" value="10"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
