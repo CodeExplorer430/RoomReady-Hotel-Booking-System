@@ -4,7 +4,7 @@
  */
 package main.java.roomready.payment;
 
-import main.java.roomready.booking.gui.MainFrame;
+import main.java.roomready.booking.gui.NewFrame;
 
 /**
  *
@@ -136,8 +136,6 @@ public class PaymentWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_proceedToPaymentActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MainFrame mainFrame = new MainFrame();
-        mainFrame.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

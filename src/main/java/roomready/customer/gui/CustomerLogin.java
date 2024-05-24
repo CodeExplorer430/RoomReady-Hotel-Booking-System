@@ -9,9 +9,9 @@ import main.java.roomready.gui.LoginMenu;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import main.java.roomready.payment.CustomerPayment;
+import main.java.roomready.payment.PaymentProcessing;
 import main.java.roomready.payment.ProceedPayment;
-import main.java.roomready.payment.ViewBookings;
+import main.java.roomready.payment.ViewBook;
 
 
 /**
@@ -337,8 +337,8 @@ public class CustomerLogin extends javax.swing.JFrame {
            // Proceed to the customer dashboard
            CustomerPanel customerPanel = new CustomerPanel(fullName);
            ProceedPayment proceedPayment = new ProceedPayment(username);
-           ViewBookings viewBookings = new ViewBookings(username);
-           CustomerPayment customerPayment = new CustomerPayment(username);
+           ViewBook viewBookings = new ViewBook(username);
+           PaymentProcessing customerPayment = new PaymentProcessing(username);
            customerPanel.setVisible(true);
            
            // Close the login form

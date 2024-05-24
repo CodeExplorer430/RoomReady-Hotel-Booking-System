@@ -313,11 +313,6 @@ public class SecondFrame extends javax.swing.JFrame {
 
     // Method to back to MainFrame or Rooms
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        // Initialize MainFrame class to call that frame or window
-        MainFrame backToMainFrame = new MainFrame();
-        // Set visible true to display again the MainFrame Jframe
-        backToMainFrame.setVisible(true);
-        // Then dispose the current window or the secondframe
         dispose();
     }//GEN-LAST:event_backActionPerformed
 

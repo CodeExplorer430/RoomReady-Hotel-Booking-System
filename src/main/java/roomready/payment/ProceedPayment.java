@@ -6,16 +6,14 @@ package main.java.roomready.payment;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import main.java.roomready.authentication.CustomerAuthenticationManager;
-import main.java.roomready.booking.gui.MainFrame;
+import main.java.roomready.booking.gui.NewFrame;
 
 /**
  *
@@ -165,10 +163,10 @@ public class ProceedPayment extends javax.swing.JFrame {
                 boolean isValid = validateBeforeClose();
                 if (!isValid){
                     // If validation fails or the user do unnecessary, cancel the window close operation
-                    setDefaultCloseOperation(MainFrame.DO_NOTHING_ON_CLOSE);
+                    setDefaultCloseOperation(NewFrame.DO_NOTHING_ON_CLOSE);
                 } else {
                     // If validation process or yes, will close the window
-                    setDefaultCloseOperation(MainFrame.DISPOSE_ON_CLOSE);
+                    setDefaultCloseOperation(NewFrame.DISPOSE_ON_CLOSE);
                 }
             }
         });

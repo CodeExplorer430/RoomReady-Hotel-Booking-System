@@ -82,3 +82,8 @@ roomNumber|roomAvailability|roomType|hours|date|time|floorLevel
 200|Available|Deluxe 2 / Deluxe Twin|20|Wed29May2024|18:35:40|7th Floor
 200|Available|Deluxe 2 / Deluxe Twin|30|Wed29May2024|19:14:47|7th Floor
 190|Available|Superior|20|Tue28May2024|19:51:00|6th Floor
+120|Available|Deluxe 1 / Deluxe Double|20|Fri31May2024|22:53:35|3rd Floor
+180|Available|Deluxe 2 / Deluxe Twin|20|Wed29May2024|23:30:48|4th Floor
+190|Available|Superior|20|Tue28May2024|00:59:40|6th Floor
+180|Available|Deluxe 2 / Deluxe Twin|70|Fri31May2024|01:06:06|4th Floor
+120|Available|Deluxe 1 / Deluxe Double|30|Mon27May2024|01:07:51|3rd Floor

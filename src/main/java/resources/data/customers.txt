@@ -1,8 +1,4 @@
-856e23b7-0659-4904-8cd6-0a7a45a95ea8|testuser|testpassword123|test|Male|test@gmail.com|01234567890|2004-07-12|C:\Users\Miguel\Downloads\wojak hacker.png|2024-04-29 11:21:15
-32c0e9c0-2291-4423-8955-3e419024196f|customer1|customer1&|Miguel Harvey N. Velasco|Male|velascomiguelharvey.bsit@gmail.com|09937420246|2005-04-06|C:\Users\Miguel\Downloads\ID_picture_for_editing-removebg.png|2024-04-29 11:53:35
-56c9da30-2d20-42b1-8c82-dd2132ff182e|customer2|customer2%|Philip Mathew Bobis|Male|bobisphilipmathew.bsit@gmail.com|09948196759|2004-03-14|C:\Users\Miguel\Downloads\bobis.jpg|2024-04-29 22:57:09
 412b37b4-b26b-4d1b-bbcc-bbde74c3938c|pmbobis|136622120196Pm@|Philip Mathew Bobis|Male|pmathew2004@gmail.com|09948196759|2004-03-14|C:\Users\philipmathewbobis\OneDrive\Documents\diamon-hotel.jpg|2024-05-01 02:55:00
-e6036a95-a124-4ad2-91ee-d69a8c40dc6c|ryangosling|ryangosling85!|Ryan Gosling|Male|ryangosling@gmail.com|01234567890|1985-11-15|C:\Users\Miguel\Downloads\Ryan Gosling.jpg|2024-05-01 04:14:45
 ea6bdcb7-56f4-4365-9b0d-324a60a99ea6|jankyran|password123%|Jan Kyran T. Villamor|Male|jankyranvillamor@gmail.com|09535665231|2004-06-30|C:\Users\Miguel\Downloads\Kyran pic.jpg|2024-05-13 23:22:49
 5daff0f1-5b0d-486a-835e-b48dd3b1a352|testuser12|testingpassword678$|Tester Account|Male|test@gmail.com|133678687|2001-06-15|C:\Users\Miguel\Downloads\the-beatles-let-it-be-rubber-soul-music-abbey-road-the-beatles-d3a283cfbb21bdc59ebc10bfdc29cfd7.png|2024-05-13 23:25:44
 ce69eed9-b101-4733-80aa-ad05ab8def5f|lawrence|@136616lawrence|Lawrence Baylon|Other|lawrence10@gmail.com|09662170551|2005-09-01|C:\Users\philipmathewbobis\OneDrive\Pictures\Screenshots\Screenshot 2024-02-27 061335.png|2024-05-23 14:38:09

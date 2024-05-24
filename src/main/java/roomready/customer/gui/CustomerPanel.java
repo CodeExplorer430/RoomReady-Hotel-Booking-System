@@ -7,9 +7,9 @@ package main.java.roomready.customer.gui;
 
 import javax.swing.JOptionPane;
 import main.java.roomready.authentication.CustomerAuthenticationManager;
-import main.java.roomready.booking.gui.MainFrame;
-import main.java.roomready.payment.CustomerPayment;
-import main.java.roomready.payment.ViewBookings;
+import main.java.roomready.booking.gui.NewFrame;
+import main.java.roomready.payment.PaymentProcessing;
+import main.java.roomready.payment.ViewBook;
 
 /**
  *
@@ -349,8 +349,10 @@ public class CustomerPanel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       CustomerPayment customerPayment = new CustomerPayment();
-       customerPayment.setVisible(true);
+//       CustomerPayment customerPayment = new CustomerPayment();
+//       customerPayment.setVisible(true);
+         tabbedPane.removeAll();
+         tabbedPane.addTab("Payment Proceasing", new PaymentProcessing());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
@@ -370,13 +372,17 @@ public class CustomerPanel extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       MainFrame roomReservation = new MainFrame();
-       roomReservation.setVisible(true);
+//       MainFrame roomReservation = new MainFrame();
+//       roomReservation.setVisible(true);
+         tabbedPane.removeAll();
+         tabbedPane.addTab("Room reservations", new NewFrame());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        ViewBookings viewBookings = new ViewBookings();
-        viewBookings.setVisible(true);
+//        ViewBookings viewBookings = new ViewBookings();
+//        viewBookings.setVisible(true);
+          tabbedPane.removeAll();
+          tabbedPane.addTab("View Bookings",new ViewBook());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

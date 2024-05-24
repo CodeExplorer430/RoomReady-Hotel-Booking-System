@@ -3,3 +3,8 @@ pmbobis|Philip Mathew Bobis|150|Deluxe 2 / Deluxe Twin|20|4th Floor|May 28, 2024
 pmbobis|Philip Mathew Bobis|180|Deluxe 2 / Deluxe Twin|40|4th Floor|May 29, 2024 Wed|2695.0|Paid
 pmbobis|Philip Mathew Bobis|200|Deluxe 2 / Deluxe Twin|20|7th Floor|May 29, 2024 Wed|1100.0|Paid
 pmbobis|Philip Mathew Bobis|190|Superior|20|6th Floor|May 28, 2024 Tue|1195.0|Paid
+pmbobis|Philip Mathew Bobis|120|Deluxe 1 / Deluxe Double|20|3rd Floor|May 31, 2024 Fri|995.0|Paid
+pmbobis|Philip Mathew Bobis|180|Deluxe 2 / Deluxe Twin|20|4th Floor|May 29, 2024 Wed|1100.0|Paid
+pmbobis|Philip Mathew Bobis|190|Superior|20|6th Floor|May 28, 2024 Tue|1195.0|Paid
+pmbobis|Philip Mathew Bobis|180|Deluxe 2 / Deluxe Twin|70|4th Floor|May 31, 2024 Fri|4290.0|Paid
+pmbobis|Philip Mathew Bobis|120|Deluxe 1 / Deluxe Double|30|3rd Floor|May 27, 2024 Mon|2090.0|Paid
