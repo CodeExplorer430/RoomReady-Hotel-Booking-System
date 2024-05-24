@@ -1,17 +1,19 @@
 package main.java.roomready.booking.gui;
 
+import main.java.roomready.utils.ImageRenderer;
 
-
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import main.java.roomready.room.*;
+import main.java.roomready.room.RoomManager;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -24,12 +26,17 @@ import javax.swing.table.DefaultTableModel;
  */
 public class MainFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MainFrame
-     */
+    private final String pathFile = "src\\main\\java\\resources\\data\\Rooms.txt";
+    private AdminBookingManagement adminBooking;
+    private RoomManager roomManager;
+
+    
     public MainFrame() {
         initComponents();
         initializeComponents();
+        adminBooking = new AdminBookingManagement();
+        roomManager = new RoomManager();
+        loadRooms();
     }
     
     private void initializeComponents(){
@@ -71,7 +78,6 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        showRooms = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         roomTable = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
@@ -99,22 +105,12 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Room Reservation");
 
-        jPanel4.setBackground(new java.awt.Color(212, 163, 115));
+        jPanel4.setBackground(new java.awt.Color(154, 51, 35));
 
-        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 8, 20));
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Search Available Rooms");
-
-        showRooms.setBackground(new java.awt.Color(212, 163, 115));
-        showRooms.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        showRooms.setText("Show Rooms");
-        showRooms.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        showRooms.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showRoomsActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -122,36 +118,26 @@ public class MainFrame extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(showRooms, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(336, 336, 336))
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(showRooms)
-                .addContainerGap(15, Short.MAX_VALUE))
+            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
         );
 
         roomTable.setBackground(new java.awt.Color(218, 215, 205));
-        roomTable.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        roomTable.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         roomTable.setForeground(new java.awt.Color(0, 0, 0));
         roomTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Room no.", "Availability", "Type"
+                "Room no.", "Availability", "Type", "Room Capacity", "Floor level", "Room Image"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -167,20 +153,17 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(roomTable);
-        if (roomTable.getColumnModel().getColumnCount() > 0) {
-            roomTable.getColumnModel().getColumn(0).setHeaderValue("Room no.");
-            roomTable.getColumnModel().getColumn(1).setHeaderValue("Availability");
-            roomTable.getColumnModel().getColumn(2).setHeaderValue("Type");
-        }
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Enter Room No.");
 
-        submitRoomNo.setBackground(new java.awt.Color(218, 215, 205));
-        submitRoomNo.setFont(new java.awt.Font("Dialog", 2, 16)); // NOI18N
+        submitRoomNo.setBackground(new java.awt.Color(154, 51, 35));
+        submitRoomNo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        submitRoomNo.setForeground(new java.awt.Color(255, 255, 255));
         submitRoomNo.setText("Submit");
         submitRoomNo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        submitRoomNo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         submitRoomNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitRoomNoActionPerformed(evt);
@@ -202,42 +185,36 @@ public class MainFrame extends javax.swing.JFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 161, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(157, 157, 157))))
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(280, 280, 280)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(enterRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(331, 331, 331)
-                        .addComponent(submitRoomNo, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(280, 280, 280)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(enterRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 297, Short.MAX_VALUE))
+            .addComponent(jScrollPane1)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(323, 323, 323)
+                .addComponent(submitRoomNo, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(enterRoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(submitRoomNo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(submitRoomNo, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -257,43 +234,49 @@ public class MainFrame extends javax.swing.JFrame {
 
     private boolean buttonClicked = false;
     
-    private void showRoomsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showRoomsActionPerformed
-        if(!buttonClicked){ // Check if the button has not been clicked before
-        final String pathFile = "src/main/java/resources/data/Rooms.txt";
-        final String DELIMITER = "|";
+    
+    public void loadRooms(){
+        List<Room> rooms = roomManager.loadRooms();
+        displayRooms(rooms);
+    }
+    
+    public void displayRooms(List<Room> rooms){
+        DefaultTableModel model = (DefaultTableModel) roomTable.getModel();
+        model.setRowCount(0);
         
-        try(BufferedReader reader = new BufferedReader(new FileReader(pathFile))){
-            String header  = reader.readLine(); // read and discard first line 
-            String line;
-            DefaultTableModel model = (DefaultTableModel) roomTable.getModel();
-            
-            while ((line = reader.readLine()) != null){
-                String[] data = line.split("\\|");
-                
-                if(data.length >= 3){
-                    String roomAvaillabilty = data[1];
-                    String roomType = data[2];
-                    
-                    int roomNumber = 0;
-                    if(data[0].matches("\\d+")){
-                        roomNumber = Integer.parseInt(data[0]);
-                    }
-                    
-                    model.addRow(new Object[]{roomNumber,roomAvaillabilty,roomType});
-                    
-                }else {
-                   JOptionPane.showMessageDialog(null, "Invalid data line.","An Error Occured",JOptionPane.ERROR_MESSAGE);
-                } 
-            }
-        }catch (IOException e){
-            e.printStackTrace();
+        for(Room room : rooms){
+            model.addRow(new Object[]{
+                room.getRoomNo(),
+                roomStatus(room),
+                room.getRoomType(),
+                room.getCapacity(),
+                room.getFloor(),
+                createImageIcon(room.getRoomImage())
+            });
         }
-            buttonClicked = true;
-        } else {
-            JOptionPane.showMessageDialog(null, "You've already added the data. Clicking again will have no effect.","Already added", JOptionPane.INFORMATION_MESSAGE);
+        
+        roomTable.getColumnModel().getColumn(5).setCellRenderer(new ImageRenderer());
+    }
+    
+    private ImageIcon createImageIcon(String imagePath){
+        if(imagePath != null && !imagePath.isEmpty()){
+            ImageIcon imageIcon = new ImageIcon(imagePath);
+            Image image = imageIcon.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+            return new ImageIcon(image);
         }
-    }//GEN-LAST:event_showRoomsActionPerformed
-
+        return null;
+    }
+    
+    private String roomStatus(Room room){
+        if(room.isOccupied()){
+            return "Occupied";
+        }else if (room.isUnderMaintenance()){
+            return "Maintenance";
+        }else{
+            return "Available";
+        }
+    }
+    
     private void setupEnterKeyHandling(){
         // Add action listener to the Enter Room no.
         enterRoom.addActionListener(new ActionListener(){
@@ -312,6 +295,14 @@ public class MainFrame extends javax.swing.JFrame {
         
         // Set the renderer for the first column
         roomTable.getColumnModel().getColumn(0).setCellRenderer(dtcr);
+        
+        // Set the preferred width for specific columns
+        roomTable.getColumnModel().getColumn(0).setPreferredWidth(100);
+        roomTable.getColumnModel().getColumn(1).setPreferredWidth(100);
+        roomTable.getColumnModel().getColumn(2).setPreferredWidth(200);
+        roomTable.getColumnModel().getColumn(3).setPreferredWidth(120);
+        roomTable.getColumnModel().getColumn(4).setPreferredWidth(120);
+        roomTable.getColumnModel().getColumn(5).setPreferredWidth(200);
     }//GEN-LAST:event_roomTablePropertyChange
     
     private void submitRoomNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitRoomNoActionPerformed
@@ -339,7 +330,7 @@ public class MainFrame extends javax.swing.JFrame {
                         rowData[i] = model.getValueAt(row, i);
                     }
                     Object rateType = model.getValueAt(row, 2);
-                       if (rateType != null && rateType.toString().equalsIgnoreCase("deluxe1")){
+                       if (rateType != null && rateType.toString().equalsIgnoreCase("Deluxe 1 / Deluxe Double")){
                            JOptionPane.showMessageDialog(null, "Room no. " + rowData[0] +
                                                                       "\nRoom availability: " + rowData[1] +
                                                                       "\nRoom type: " + rowData[2]+ 
@@ -350,7 +341,7 @@ public class MainFrame extends javax.swing.JFrame {
                                                                       "\n\t\t OT 132 pesos","Selected Room",JOptionPane.INFORMATION_MESSAGE);
                 
                        }
-                       if (rateType != null && rateType.toString().equalsIgnoreCase("deluxe2")){
+                       if (rateType != null && rateType.toString().equalsIgnoreCase("Deluxe 2 / Deluxe Twin")){
                            JOptionPane.showMessageDialog(null, "Room no. " + rowData[0] +
                                                                       "\nRoom availability: " + rowData[1] +
                                                                       "\nRoom type: " + rowData[2]+ 
@@ -372,6 +363,13 @@ public class MainFrame extends javax.swing.JFrame {
                                                                       "\n\t\t OT 265 pesos","Selected Room",JOptionPane.INFORMATION_MESSAGE);
                 
                        }
+                       if(rateType != null && rateType.toString().equalsIgnoreCase("Business Class / Studio Suite")){
+                           JOptionPane.showMessageDialog(null, "Room no. " + rowData[0] +
+                                                                      "\nRoom availability: " + rowData[1] +
+                                                                      "\nRoom type: " + rowData[2]+ 
+                                                                      "\nRates: 12 Hours 1295 " + 
+                                                                      "\n24 Hours 1796","Selected Room",JOptionPane.INFORMATION_MESSAGE);
+                       }
                     // Open the next window here 
                 SecondFrame fillForm = new SecondFrame(rowData);
                 fillForm.setVisible(true);
@@ -379,8 +377,11 @@ public class MainFrame extends javax.swing.JFrame {
                 dispose();
                 break;
                 }else {
-                    if (!isAvailable){
-                JOptionPane.showMessageDialog(null, "Room Not Available", "Not Available!!", JOptionPane.WARNING_MESSAGE);
+                    if (!isAvailable && roomAvailabilty.toString().equalsIgnoreCase("Occupied")){
+                JOptionPane.showMessageDialog(null, "Room is occupied.", "Not Available!!", JOptionPane.WARNING_MESSAGE);
+                    }
+                    if (!isAvailable && roomAvailabilty != null && roomAvailabilty.toString().equalsIgnoreCase("Maintenance")){
+                JOptionPane.showMessageDialog(null, "Room is under maintenance.", "Not Available!!", JOptionPane.WARNING_MESSAGE);
                     }
                 }
             }
@@ -432,7 +433,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable roomTable;
-    private javax.swing.JButton showRooms;
     private javax.swing.JButton submitRoomNo;
     // End of variables declaration//GEN-END:variables
 }

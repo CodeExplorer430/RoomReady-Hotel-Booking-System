@@ -1,25 +1,9 @@
-RoomNo|Availabilty|Type
-100|Available|DELUXE1
-101|NotAvailable|DELUXE1
-102|Available|DELUXE2
-103|Available|DELUXE2
-104|NotAvailable|DELUXE2
-105|NotAvailable|DELUXE1
-106|NotAvailable|DELUXE1
-107|Available|DELUXE1
-108|Available|DELUXE2
-109|Available|SUPERIOR
-110|Available|DELUXE2
-111|Available|SUPERIOR
-112|Available|DELUXE1
-113|NotAvailable|DELUXE1
-114|Available|DELUXE2
-115|Available|DELUXE2
-116|NotAvailable|DELUXE2
-117|NotAvailable|DELUXE1
-118|NotAvailable|DELUXE1
-119|Available|DELUXE1
-120|Available|DELUXE2
-121|Available|SUPERIOR
-122|Available|DELUXE2
-123|Available|SUPERIOR
+RM120|120|Deluxe 1 / Deluxe Double|2 Guests|3rd Floor|C:\Users\philipmathewbobis\OneDrive\Documents\NetBeansProjects\RoomReady-Hotel-Booking-System\src\main\java\resources\data\rooms\Deluxe 1\DELUXE 1_Room1.jpg|false|false|2024-05-24 18:13:40
+RM150|150|Deluxe 2 / Deluxe Twin|3 Guests|4th Floor|C:\Users\philipmathewbobis\OneDrive\Documents\NetBeansProjects\RoomReady-Hotel-Booking-System\src\main\java\resources\data\rooms\Deluxe 2\DELUXE 2_Room1.jpg|false|false|2024-05-24 18:13:40
+RM200|200|Deluxe 2 / Deluxe Twin|2 Guests|7th Floor|C:\Users\philipmathewbobis\OneDrive\Documents\NetBeansProjects\RoomReady-Hotel-Booking-System\src\main\java\resources\data\rooms\Deluxe 2\DELUXE 2_Room3.jpg|false|false|2024-05-24 18:13:40
+RM190|190|Deluxe 1 / Deluxe Double|1 Guest|5th Floor|C:\Users\philipmathewbobis\OneDrive\Documents\NetBeansProjects\RoomReady-Hotel-Booking-System\src\main\java\resources\data\rooms\Deluxe 1\DELUXE 1_Room3.jpg|true|false|2024-05-24 18:13:40
+RM151|151|Superior|3 Guests|10th Floor|C:\Users\philipmathewbobis\OneDrive\Documents\NetBeansProjects\RoomReady-Hotel-Booking-System\src\main\java\resources\data\rooms\Superior\SUPERIOR_Room1.jpg|false|false|2024-05-24 18:13:40
+RM152|152|Business Class / Studio Suite|2 Guests|9th Floor|C:\Users\philipmathewbobis\OneDrive\Documents\NetBeansProjects\RoomReady-Hotel-Booking-System\src\main\java\resources\data\rooms\Business\Business_Room1.jpg|true|false|2024-05-24 18:13:40
+RM170|170|Business Class / Studio Suite|3 Guests|10th Floor|C:\Users\philipmathewbobis\OneDrive\Documents\NetBeansProjects\RoomReady-Hotel-Booking-System\src\main\java\resources\data\rooms\Business\Business_Room2.jpg|true|false|2024-05-24 18:13:40
+RM180|180|Deluxe 2 / Deluxe Twin|2 Guests|4th Floor|C:\Users\philipmathewbobis\OneDrive\Documents\NetBeansProjects\RoomReady-Hotel-Booking-System\src\main\java\resources\data\rooms\Deluxe 2\DELUXE 2_Room1.jpg|false|false|2024-05-24 18:13:40
+RM190|190|Superior|3 Guests|6th Floor|C:\Users\philipmathewbobis\OneDrive\Documents\NetBeansProjects\RoomReady-Hotel-Booking-System\src\main\java\resources\data\rooms\Superior\SUPERIOR_Room2.jpg|false|false|2024-05-24 18:13:40

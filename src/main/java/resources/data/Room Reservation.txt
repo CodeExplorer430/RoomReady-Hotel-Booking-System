@@ -1,66 +1,84 @@
-roomNumber|roomAvailability|roomType|hours|date|time
-123|Available|SUPERIOR|20|Mon15Jul2024|22:50:24
-111|Available|SUPERIOR|20|Tue30Jul2024|22:51:24
-111|Available|SUPERIOR|20|Tue13Aug2024|02:13:45
-110|Available|DELUXE2|20|Tue13Aug2024|03:58:21
-112|Available|DELUXE1|22|Mon20May2024|17:48:32
-123|Available|SUPERIOR|6|Wed29May2024|17:50:18
-120|Available|DELUXE2|20|Fri17May2024|17:52:06
-112|Available|DELUXE1|20|Mon27May2024|17:55:38
-112|Available|DELUXE1|8|Tue28May2024|17:57:55
-112|Available|DELUXE1|20|Fri17May2024|17:58:52
-122|Available|DELUXE2|20|Fri17May2024|18:01:06
-111|Available|SUPERIOR|20|Fri17May2024|18:02:26
-111|Available|SUPERIOR|10|Fri17May2024|18:03:26
-123|Available|SUPERIOR|4|Wed22May2024|18:28:52
-122|Available|DELUXE2|4|Wed29May2024|18:32:04
-123|Available|SUPERIOR|20|Wed29May2024|18:43:25
-111|Available|SUPERIOR|10|Mon27May2024|18:46:26
-123|Available|SUPERIOR|10|Sun26May2024|18:48:16
-122|Available|DELUXE2|6|Wed29May2024|18:50:47
-109|Available|SUPERIOR|10|Tue28May2024|18:51:22
-110|Available|DELUXE2|8|Thu30May2024|18:52:29
-112|Available|DELUXE1|22|Fri17May2024|18:55:33
-112|Available|DELUXE1|10|Mon27May2024|19:04:45
-111|Available|SUPERIOR|10|Wed29May2024|19:09:30
-122|Available|DELUXE2|12|Wed22May2024|19:10:58
-111|Available|SUPERIOR|10|Wed29May2024|19:14:04
-112|Available|DELUXE1|10|Thu30May2024|19:18:53
-111|Available|SUPERIOR|10|Tue28May2024|19:19:55
-123|Available|SUPERIOR|10|Wed29May2024|19:24:34
-110|Available|DELUXE2|4|Fri31May2024|19:25:47
-123|Available|SUPERIOR|5|Thu30May2024|20:05:49
-121|Available|SUPERIOR|12|Tue21May2024|20:13:53
-111|Available|SUPERIOR|5|Fri17May2024|20:16:09
-100|Available|DELUXE1|10|Tue28May2024|20:26:36
-123|Available|SUPERIOR|5|Fri17May2024|20:31:44
-122|Available|DELUXE2|20|Tue28May2024|20:33:34
-114|Available|DELUXE2|6|Tue28May2024|20:38:41
-111|Available|SUPERIOR|10|Mon27May2024|07:51:40
-123|Available|SUPERIOR|10|Wed29May2024|08:08:03
-111|Available|SUPERIOR|21|Tue28May2024|08:20:09
-120|Available|DELUXE2|7|Wed29May2024|08:29:57
-111|Available|SUPERIOR|4|Thu30May2024|08:31:06
-111|Available|SUPERIOR|10|Mon27May2024|08:59:18
-111|Available|SUPERIOR|10|Mon27May2024|09:00:50
-123|Available|SUPERIOR|10|Wed29May2024|09:29:31
-112|Available|DELUXE1|4|Tue28May2024|09:34:23
-123|Available|SUPERIOR|20|Tue28May2024|09:36:01
-120|Available|DELUXE2|10|Sun26May2024|09:36:55
-119|Available|DELUXE1|5|Thu30May2024|09:38:13
-123|Available|SUPERIOR|3|Wed29May2024|09:41:12
-111|Available|SUPERIOR|6|Tue28May2024|09:42:13
-123|Available|SUPERIOR|20|Tue28May2024|09:50:09
-111|Available|SUPERIOR|5|Wed29May2024|09:59:29
-111|Available|SUPERIOR|6|Wed29May2024|10:03:26
-112|Available|DELUXE1|6|Tue28May2024|10:04:47
-123|Available|SUPERIOR|10|Wed29May2024|10:05:14
-112|Available|DELUXE1|7|Tue28May2024|10:06:49
-123|Available|SUPERIOR|7|Wed29May2024|10:09:03
-123|Available|SUPERIOR|10|Tue28May2024|10:10:13
-123|Available|SUPERIOR|6|Wed29May2024|10:11:36
-111|Available|SUPERIOR|4|Tue28May2024|10:13:47
-112|Available|DELUXE1|9|Wed29May2024|10:16:44
-112|Available|DELUXE1|5|Wed29May2024|10:17:47
-123|Available|SUPERIOR|7|Wed29May2024|10:22:05
-100|Available|DELUXE1|30|Mon27May2024|10:23:56
+roomNumber|roomAvailability|roomType|hours|date|time|floorLevel
+190|false|Deluxe 1 / Deluxe Double|50|Tue28May2024|13:34:45|5th Floor
+190|false|Deluxe 1 / Deluxe Double|50|Tue28May2024|14:43:06|5th Floor
+150|false|Deluxe 2 / Deluxe Twin|100|Tue28May2024|14:44:57|4th Floor
+190|false|Deluxe 1 / Deluxe Double|20|Tue28May2024|14:49:34|5th Floor
+190|false|Deluxe 1 / Deluxe Double|60|Mon27May2024|14:52:31|5th Floor
+150|false|Deluxe 2 / Deluxe Twin|40|Mon27May2024|14:53:38|4th Floor
+190|false|Deluxe 1 / Deluxe Double|20|Tue28May2024|14:54:44|5th Floor
+150|false|Deluxe 2 / Deluxe Twin|40|Tue28May2024|14:56:57|4th Floor
+150|false|Deluxe 2 / Deluxe Twin|40|Mon27May2024|14:58:06|4th Floor
+150|false|Deluxe 2 / Deluxe Twin|50|Tue28May2024|14:59:49|4th Floor
+150|false|Deluxe 2 / Deluxe Twin|30|Tue28May2024|15:00:31|4th Floor
+190|false|Deluxe 1 / Deluxe Double|100|Tue28May2024|15:02:14|5th Floor
+150|false|Deluxe 2 / Deluxe Twin|40|Wed29May2024|15:03:23|4th Floor
+150|false|Deluxe 2 / Deluxe Twin|40|Wed29May2024|16:37:24|4th Floor
+150|false|Deluxe 2 / Deluxe Twin|30|Wed29May2024|16:55:06|4th Floor
+190|false|Deluxe 1 / Deluxe Double|40|Tue28May2024|16:55:16|5th Floor
+190|false|Deluxe 1 / Deluxe Double|30|Wed29May2024|19:43:22|5th Floor
+152|false|Business Class / Studio Suite|52|Tue28May2024|19:48:40|9th Floor
+151|false|Superior|40|Tue28May2024|19:50:15|10th Floor
+151|false|Superior|30|Wed29May2024|19:52:56|10th Floor
+120|false|Deluxe 1 / Deluxe Double|40|Tue28May2024|19:54:41|3rd Floor
+152|false|Business Class / Studio Suite|50|Wed29May2024|11:09:50|9th Floor
+151|false|Superior|50|Wed29May2024|11:11:10|10th Floor
+120|false|Deluxe 1 / Deluxe Double|40|Tue28May2024|11:13:26|3rd Floor
+151|false|Superior|60|Tue28May2024|11:13:44|10th Floor
+151|false|Superior|20|Tue28May2024|11:21:27|10th Floor
+151|false|Superior|40|Mon27May2024|11:32:26|10th Floor
+151|false|Superior|40|Wed29May2024|11:59:00|10th Floor
+151|false|Superior|20|Wed29May2024|12:00:00|10th Floor
+152|false|Business Class / Studio Suite|1|Thu23May2024|13:30:03|9th Floor
+152|false|Business Class / Studio Suite|12|Mon27May2024|13:48:21|9th Floor
+152|false|Business Class / Studio Suite|24|Wed29May2024|14:02:04|9th Floor
+152|false|Business Class / Studio Suite|12|Mon27May2024|14:38:30|9th Floor
+152|false|Business Class / Studio Suite|24|Mon27May2024|00:54:32|9th Floor
+152|false|Business Class / Studio Suite|12|Wed29May2024|01:00:15|9th Floor
+151|false|Superior|20|Tue28May2024|01:02:55|10th Floor
+152|false|Business Class / Studio Suite|12|Thu30May2024|01:09:54|9th Floor
+120|false|Deluxe 1 / Deluxe Double|20|Wed29May2024|01:14:51|3rd Floor
+200|false|Deluxe 2 / Deluxe Twin|40|Mon27May2024|01:15:08|7th Floor
+152|false|Business Class / Studio Suite|24|Tue28May2024|01:25:53|9th Floor
+152|false|Business Class / Studio Suite|24|Mon27May2024|01:27:25|9th Floor
+152|false|Business Class / Studio Suite|12|Wed29May2024|01:37:32|9th Floor
+120|false|Deluxe 1 / Deluxe Double|30|Mon27May2024|01:40:21|3rd Floor
+152|false|Business Class / Studio Suite|24|Wed29May2024|01:43:24|9th Floor
+151|false|Superior|40|Tue28May2024|01:50:13|10th Floor
+200|false|Deluxe 2 / Deluxe Twin|30|Wed29May2024|01:52:48|7th Floor
+151|Available|Superior|30|Mon27May2024|03:24:28|10th Floor
+120|Available|Deluxe 1 / Deluxe Double|40|Tue28May2024|03:25:06|3rd Floor
+170|Available|Business Class / Studio Suite|24|Wed29May2024|03:27:54|10th Floor
+180|Available|Deluxe 2 / Deluxe Twin|7|Wed29May2024|03:31:28|4th Floor
+120|Available|Deluxe 1 / Deluxe Double|30|Tue28May2024|03:32:23|3rd Floor
+151|Available|Superior|30|Mon27May2024|03:42:07|10th Floor
+190|Available|Superior|20|Tue28May2024|04:02:00|6th Floor
+150|Available|Deluxe 2 / Deluxe Twin|20|Tue28May2024|04:08:25|4th Floor
+180|Available|Deluxe 2 / Deluxe Twin|30|Tue28May2024|04:09:07|4th Floor
+150|Available|Deluxe 2 / Deluxe Twin|20|Tue28May2024|14:45:18|4th Floor
+180|Available|Deluxe 2 / Deluxe Twin|30|Tue28May2024|14:47:08|4th Floor
+170|Available|Business Class / Studio Suite|24|Thu30May2024|15:21:53|10th Floor
+180|Available|Deluxe 2 / Deluxe Twin|20|Fri24May2024|15:29:48|4th Floor
+170|Available|Business Class / Studio Suite|24|Thu30May2024|15:35:30|10th Floor
+150|Available|Deluxe 2 / Deluxe Twin|20|Fri24May2024|15:35:51|4th Floor
+170|Available|Business Class / Studio Suite|12|Fri24May2024|15:36:31|10th Floor
+150|Available|Deluxe 2 / Deluxe Twin|20|Fri24May2024|15:37:31|4th Floor
+170|Available|Business Class / Studio Suite|24|Fri24May2024|15:37:54|10th Floor
+150|Available|Deluxe 2 / Deluxe Twin|20|Fri24May2024|15:42:01|4th Floor
+170|Available|Business Class / Studio Suite|24|Wed29May2024|15:44:05|10th Floor
+150|Available|Deluxe 2 / Deluxe Twin|20|Thu30May2024|15:44:40|4th Floor
+150|Available|Deluxe 2 / Deluxe Twin|30|Fri24May2024|15:47:07|4th Floor
+190|Available|Superior|20|Thu30May2024|18:01:57|6th Floor
+150|Available|Deluxe 2 / Deluxe Twin|30|Wed29May2024|18:03:38|4th Floor
+150|Available|Deluxe 2 / Deluxe Twin|40|Wed29May2024|18:05:11|4th Floor
+190|Available|Superior|30|Wed29May2024|18:05:33|6th Floor
+180|Available|Deluxe 2 / Deluxe Twin|30|Wed29May2024|18:07:57|4th Floor
+170|Available|Business Class / Studio Suite|12|Fri31May2024|18:09:39|10th Floor
+120|Available|Deluxe 1 / Deluxe Double|50|Wed29May2024|18:14:11|3rd Floor
+200|Available|Deluxe 2 / Deluxe Twin|50|Wed29May2024|18:16:22|7th Floor
+151|Available|Superior|50|Thu30May2024|18:19:29|10th Floor
+151|Available|Superior|40|Tue28May2024|18:24:15|10th Floor
+150|Available|Deluxe 2 / Deluxe Twin|20|Tue28May2024|18:24:36|4th Floor
+180|Available|Deluxe 2 / Deluxe Twin|40|Wed29May2024|18:31:18|4th Floor
+200|Available|Deluxe 2 / Deluxe Twin|20|Wed29May2024|18:35:40|7th Floor
+200|Available|Deluxe 2 / Deluxe Twin|30|Wed29May2024|19:14:47|7th Floor
+190|Available|Superior|20|Tue28May2024|19:51:00|6th Floor

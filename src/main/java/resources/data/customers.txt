@@ -5,3 +5,4 @@
 e6036a95-a124-4ad2-91ee-d69a8c40dc6c|ryangosling|ryangosling85!|Ryan Gosling|Male|ryangosling@gmail.com|01234567890|1985-11-15|C:\Users\Miguel\Downloads\Ryan Gosling.jpg|2024-05-01 04:14:45
 ea6bdcb7-56f4-4365-9b0d-324a60a99ea6|jankyran|password123%|Jan Kyran T. Villamor|Male|jankyranvillamor@gmail.com|09535665231|2004-06-30|C:\Users\Miguel\Downloads\Kyran pic.jpg|2024-05-13 23:22:49
 5daff0f1-5b0d-486a-835e-b48dd3b1a352|testuser12|testingpassword678$|Tester Account|Male|test@gmail.com|133678687|2001-06-15|C:\Users\Miguel\Downloads\the-beatles-let-it-be-rubber-soul-music-abbey-road-the-beatles-d3a283cfbb21bdc59ebc10bfdc29cfd7.png|2024-05-13 23:25:44
+ce69eed9-b101-4733-80aa-ad05ab8def5f|lawrence|@136616lawrence|Lawrence Baylon|Other|lawrence10@gmail.com|09662170551|2005-09-01|C:\Users\philipmathewbobis\OneDrive\Pictures\Screenshots\Screenshot 2024-02-27 061335.png|2024-05-23 14:38:09

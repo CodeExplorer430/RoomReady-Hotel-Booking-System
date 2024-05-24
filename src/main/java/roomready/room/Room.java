@@ -34,6 +34,7 @@ public class Room implements Serializable {
         this.occupied = false;
         this.underMaintenance = false;
     }
+
     
     // Getters and setters
     // Omitted for brevity

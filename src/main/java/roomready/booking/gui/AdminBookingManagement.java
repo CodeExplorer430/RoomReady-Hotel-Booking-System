@@ -410,7 +410,7 @@ public class AdminBookingManagement extends javax.swing.JPanel {
         displayRooms(filteredRooms);
     }
     
-    private void displayRooms(List<Room> rooms){
+    void displayRooms(List<Room> rooms){
         DefaultTableModel model = (DefaultTableModel) roomTable.getModel();
         model.setRowCount(0); // Clear existing data
         

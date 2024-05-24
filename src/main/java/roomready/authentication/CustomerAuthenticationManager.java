@@ -25,7 +25,7 @@ public class CustomerAuthenticationManager {
     private static final String USER_FILE = "src/main/java/resources/data/customers.txt";
     private static final String DELIMITER  = "|";
     
-    public CustomerAuthenticationManager(){
+public CustomerAuthenticationManager(){
         // Create the user file if it doesn't exist
         try{
             FileWriter fw = new FileWriter(USER_FILE, true);
